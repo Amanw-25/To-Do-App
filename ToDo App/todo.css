@@ -1,9 +1,8 @@
-/* body{
-    background: linear-gradient(135deg,#153677,#4e085f);
-} */
+body {
+    background: linear-gradient(135deg, #153677, #4e085f);
+}
 
-
-#todo-app{
+#todo-app {
     width: 100%;
     max-width: 575px;
     background-color: pink;
@@ -12,51 +11,41 @@
     border-radius: 10px;
 }
 
-.img1{
-    height: 300px;
-    width: 100%
+.img1 {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjust the max-height as needed */
 }
 
-
-
-
-/* h2{
-    margin-left: 550px;
-} */
-
-input{
-    width: 400px;
+input {
+    width: 100%;
+    max-width: 400px;
     border: 2px solid black;
     border-radius: 20px;
-    /* margin-left: 550px; */
     background: transparent;
     padding: 5px;
     font-weight: 14px;
 }
 
-.delete{
+.delete, .add {
     border-radius: 50px;
 }
 
-.add{
-    border-radius: 50px;
+.add {
     background-color: #ff5945;
     color: #fff;
-   
 }
 
-ul li{
+ul li {
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
     position: relative;
-    /* margin-left: 500px; */
-    
 }
 
-ul li::before{
+ul li::before {
     content: '';
     position: absolute;
     height: 28px;
@@ -69,18 +58,18 @@ ul li::before{
     left: 8px;
 }
 
-ul li.checked{
+ul li.checked {
     color: #555;
     text-decoration: line-through;
 }
 
-ul li.checked::before{
+ul li.checked::before {
     background-image: url(assests/checked.png);
 }
 
-ul li span{
+ul li span {
     position: absolute;
-    right: 75px;
+    right: 5%;
     top: 5px;
     height: 40px;
     width: 40px;
@@ -88,11 +77,28 @@ ul li span{
     color: #555;
     line-height: 40px;
     text-align: center;
-   
     border-radius: 50%;
 }
 
-ul li span:hover{
+ul li span:hover {
     background-color: #edeef0;
-    
+}
+
+@media (max-width: 575px) {
+    #todo-app {
+        margin: 20px auto 30px;
+        padding: 20px 15px 50px;
+    }
+
+    ul li {
+        padding: 10px 8px 10px 30px;
+    }
+
+    input {
+        max-width: none;
+    }
+
+    ul li span {
+        right: 10px;
+    }
 }
